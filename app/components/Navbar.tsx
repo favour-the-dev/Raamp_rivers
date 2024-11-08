@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
-import rivers_logo from "../../assets/images/raamp_rivers logo.jpeg";
-import raamp_logo from '../../assets/images/Raamp_logo.jpeg';
+import rivers_logo from "../../public/assets/images/raamp_rivers logo.jpeg";
+import raamp_logo from '../../public/assets/images/Raamp_logo.jpeg';
 import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
 import { usePathname } from "next/navigation";
@@ -117,7 +117,7 @@ function Navbar() {
                     }}>
                     {!openNav ? <RiMenu2Line /> : <IoMdClose />}
                     </div>
-                    <ul className={`${openNav ? "opacity-100 z-50 min-h-fit h-full" : "opacity-0 z-0 max-h-0 h-full"} duration-150 ease-in-out flex flex-col items-start absolute top-[90%] left-[10%] right-[10%] gap-4 p-2 text-sm font-semibold bg-white border-t-primary border-t-4 rounded-lg shadow-sm`}>
+                    <ul className={`${openNav ? "z-50 min-h-fit h-full" : "hidden z-0 max-h-0 h-full"} duration-150 ease-in-out flex flex-col items-start absolute top-[90%] left-[10%] right-[10%] gap-4 p-2 text-sm font-semibold bg-white border-t-primary border-t-4 rounded-lg shadow-sm`}>
                         <li className="relative group w-full border-b-2 border-gray-200 border-opacity-50 py-2">
                             <Link href={'/'} className={`hover:text-primary duration-150 ease-in-out ${pathName === '/' ? "text-primary" : "text-black"}`}>Home</Link>
                         </li>
