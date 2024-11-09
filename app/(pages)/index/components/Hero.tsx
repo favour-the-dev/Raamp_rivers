@@ -25,41 +25,43 @@ const slides = [
 function Hero() {
     const [currentSlde, setCurrentSlide] = useState<number>(0)
     const slideRef = useRef(null);
+    const slideContRef = useRef(null);
     const textRef = useRef(null);
 
     // Animation for entry and exit
     const animateSlide = (direction: string) => {
     const timeline = gsap.timeline();
 
-    // Exit animation
-    timeline.to(slideRef.current, {
-        opacity: 0,
-        x: direction === 'next' ? -100 : 100,
-        duration: 0.5,
-    });
-    timeline.to(textRef.current, {
-        opacity: 0,
-        x: direction === 'next' ? -50 : 50,
-        duration: 0.3,
-    });
-
+    // cont animationm
+    timeline.fromTo(slideContRef.current, 
+        {
+            backgroundColor: '#ffffff', // Change the element color to white for the flash effect         // Change text color to white (if applicable)            // Quick flash duration
+        },
+        {
+            backgroundColor: '#000000', // Change the element color to white for the flash effect
+            duration: 0.5,              // Duration for the fade-out
+            ease: "power2.out"
+        }
+    )
     // Entry animation
     timeline.fromTo(
         slideRef.current,
-        { opacity: 0, x: direction === 'next' ? 100 : -100 },
-        { opacity: 0.65, x: 0, duration: 0.5 }
+        { scale: 2.0 },
+        { scale: 1.0, duration: 1.5 }
     );
     timeline.fromTo(
         textRef.current,
-        { opacity: 0, x: direction === 'next' ? 50 : -50 },
-        { opacity: 1, x: 0, duration: 0.3 },
-        '<'
+        { opacity: 0, y: direction === 'next' ? 150 : -150 },
+        { opacity: 1, y: 0, duration: 0.5 },
     );
     };
 
     const handleNextSlide = () => {
     animateSlide('next');
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    setTimeout(()=>{
+        handleNextSlide()
+    }, 5000)
     };
 
     const handlePreviousSlide = () => {
@@ -68,16 +70,22 @@ function Hero() {
         prevSlide === 0 ? slides.length - 1 : prevSlide - 1
     );
     };
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            handleNextSlide()
+        }, 5000)
+    }, [])
     return ( 
         <>
-            <section className="hero-bg flex flex-col justify-center items-center overflow-hidden">
+            <section ref={slideContRef} className="hero-bg flex flex-col justify-center items-center overflow-hidden">
                 <img
                 ref={slideRef}
                 src={slides[currentSlde].imageUrl}
                 alt="hero_bg"
                 className="w-full h-full absolute bottom-0 left-0 opacity-65 z-0"
                 />
-                <div className="wrapper-cont relative z-10 text-white flex gap-2 items-center" ref={textRef}>
+                <div className="wrapper-cont relative z-10 text-white flex gap-2 items-center justify-between" ref={textRef}>
                     <IoIosArrowUp className="md:hidden cursor-pointer hover:scale-110 duration-150 ease-in-out text-6xl font-bold" onClick={()=>{
                         handleNextSlide()
                     }}/>
