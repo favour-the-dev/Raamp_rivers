@@ -29,7 +29,7 @@ function Navbar() {
     }, [])
     return ( 
         <>
-            <nav className={`wrapper-cont flex items-center justify-between duration-200 ease-in-out ${scroll ? "sticky top-2 left-0 z-50 rounded-full shadow-md bg-white" : "relative z-50"}`}>
+            <nav className={`wrapper-cont flex items-center justify-between duration-200 ease-in-out ${scroll ? "sticky top-2 left-0 z-50 rounded-full bg-white shadow-xl" : "relative z-50"}`}>
                 {/* logo */}
                 <div className="flex items-center gap-1 md:gap-3">
                     <Image

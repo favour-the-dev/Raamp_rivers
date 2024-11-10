@@ -21,7 +21,7 @@ body {
 }
 
 .hero-bg{
-  background-color: black;
+  /* background-color: black; */
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
