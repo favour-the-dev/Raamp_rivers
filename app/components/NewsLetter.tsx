@@ -2,7 +2,7 @@ function NewsLetter() {
     return ( 
         <>
             <section className="news-letter flex flex-col items-center justify-center p-16 md:p-28 relative border-b-primary border-b-4">
-                <div className="w-full h-full bg-black absolute top-0 left-0 opacity-50"></div>
+                <div className="w-full h-full bg-black absolute top-0 left-0 opacity-70"></div>
                 <div className="flex flex-col items-center justify-center gap-3 relative z-20 text-white text-center">
                     <h2 className="font-bold capitalize text-2xl md:text-4xl">Sign Up for Our Newsletter</h2>
                     <p className="text-sm font-semibold">Get the latest news and updates from us.</p>

@@ -13,8 +13,8 @@ function Footer() {
     const year = new Date().getFullYear()
     return ( 
         <>
-            <footer className="bg-[#1E201E] text-white">
-                <div className="p-4 wrapper-cont grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 content-start place-items-start md:place-items-center">
+            <footer className="bg-[#1E201E] text-white pt-8">
+                <div className="mb-8 wrapper-cont grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 content-start place-items-start md:place-items-center">
                     <div className="flex flex-col gap-3 w-fit">
                         <div className="flex items-center gap-1 md:gap-3">
                             <Image
@@ -81,7 +81,7 @@ function Footer() {
                         <p className="flex items-center gap-1"><CiMail className="text-2xl"/> RiversState@raamp.gov.ng</p>
                     </div>
                 </div>
-                <div className="bg-black">
+                <div className="bg-black border-t border-t-primary">
                     <div className="wrapper-cont flex flex-col gap-2 md:flex-row items-center justify-center md:justify-between">
                         <div className="">CopyRight &copy; {year} Rivers State RAAMP PIU. All Right Reserved.</div>
                         <div className="flex items-center gap-2 text-xl">

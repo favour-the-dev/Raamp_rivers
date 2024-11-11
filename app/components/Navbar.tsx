@@ -72,8 +72,8 @@ function Navbar() {
                         <Link href={'/'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/' ? "text-primary" : "text-black"}`}>Home</Link>
                     </li>
                     <li className="relative group">
-                        <Link href={'/About'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/About' ? "text-primary" : "text-black"}`}>About Us <FaAngleDown /></Link>
-                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out">
+                        <Link href={'/About'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/About' ? "text-primary" : "text-black"}`}>About Us <FaAngleDown className="group-hover:translate-y-[1px]"/></Link>
+                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 flex-col items-center gap-2 hidden group-hover:flex opacity-0 group-hover:opacity-100 duration-500 ease-in-out">
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#about-raamp">About RAAMP</a></li>
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#mission&obj">Mission & Objectives</a></li>
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#raampobj">RAAMP Objectives</a></li>
@@ -85,22 +85,22 @@ function Navbar() {
                         <Link href={'/Projects'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/Projects' ? "text-primary" : "text-black"}`}>Project</Link>
                     </li>
                     <li className="relative group">
-                        <Link href={'/Media'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/Media' ? "text-primary" : "text-black"}`}>Media Gallery <FaAngleDown /></Link>
-                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-full">
+                        <Link href={'/Media'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/Media' ? "text-primary" : "text-black"}`}>Media Gallery <FaAngleDown className="group-hover:translate-y-[1px]"/></Link>
+                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 hidden group-hover:flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-full">
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#photo-gall">Photo Gallery</a></li>
                             <li className="py-2 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#video-gall">Video Gallery</a></li>
                         </ul>
                     </li>
                     <li className="relative group">
-                        <Link href={'/News'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/News' ? "text-primary" : "text-black"}`}>News & Events <FaAngleDown /></Link>
-                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-full">
+                        <Link href={'/News'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/News' ? "text-primary" : "text-black"}`}>News & Events <FaAngleDown className="group-hover:translate-y-[1px]"/></Link>
+                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 hidden group-hover:flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-full">
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#news">News</a></li>
                             <li className="py-2 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#events">Events</a></li>
                         </ul>
                     </li>
                     <li className="relative group">
-                        <Link href={'/Contact'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/Contact' ? "text-primary" : "text-black"}`}>Contact Us <FaAngleDown /></Link>
-                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-fit">
+                        <Link href={'/Contact'} className={`flex items-center gap-1 hover:text-primary duration-150 ease-in-out ${pathName === '/Contact' ? "text-primary" : "text-black"}`}>Contact Us <FaAngleDown className="group-hover:translate-y-[1px]"/></Link>
+                        <ul className="bg-white absolute left-0 whitespace-nowrap border-t-primary border-b-2 border-x-2 p-2 border-t-2 hidden group-hover:flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 duration-500 ease-in-out w-fit">
                             <li className="py-2 border-b border-gray-300 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#contact-form">Contact Form</a></li>
                             <li className="py-2 w-full hover:text-primary hover:scale-[1.025] duration-200 ease-linear"><a href="#map-pos">Map Position</a></li>
                         </ul>

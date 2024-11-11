@@ -44,15 +44,15 @@ function AboutUs(){
         handleDistanceCounter();
         setTimeout(()=>{
             handlelgaCounter();
-        }, 500)
+        }, 1000)
         setTimeout(()=>{
             handleBridgeCounter();
-        }, 1000)
+        }, 1500)
     }, [])
     return (
         <>
             <section className="py-4 bg-[#f5f5f5]">
-                <div className="wrapper-cont flex flex-col md:flex-row gap-3">
+                <div className="wrapper-cont flex flex-col md:flex-row gap-6 px-6 md:px-0">
                     <div className="md:w-[80%] flex flex-col gap-6">
                         <div className="flex flex-col items-center text-center md:items-start md:text-start gap-6">
                             <h2 className="before:bg-gray-400 before:w-12 before:h-12 before:rounded-full before:absolute before:left-[-10px] before:top-[-10px] before:opacity-40 relative text-primary text-xl font-semibold">About Us</h2>
@@ -89,7 +89,7 @@ function AboutUs(){
                         <div className="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
                             <div className="flex flex-col gap-2 border-l-4 border-primary px-4">
                                 <span className="text-primary font-bold text-5xl">{distance} KM</span>
-                                <span className="text-lg text-[#333333] font-semibold">Completed Across Osun</span>
+                                <span className="text-lg text-[#333333] font-semibold">Completed Across Rivers</span>
                             </div>
                             <div className="flex flex-col gap-2 border-l-4 border-primary px-4">
                                 <span className="text-primary font-bold text-5xl">{lgaCount}</span>
@@ -101,13 +101,22 @@ function AboutUs(){
                             </div>
                         </div>
                     </div>
-                    <div className="w-fit relative">
+                    <div className="group hidden md:block w-fit mx-auto h-fit relative hover:before:w-[200px] before:w-[100px] before:h-[220px] hover:before:h-[300px] md:before:h-[340px] md:hover:before:h-[450px] before:bg-primary before:absolute before:left-[-19px] before:bottom-[-19px] before:z-0 after:w-[100px] hover:after:w-[200px] after:h-[220px] hover:after:h-[300px] md:after:h-[340px] hover:md:after:h-[450px] after:bg-[#006837] after:absolute after:right-[-19px] after:top-[-19px] after:z-0 after:duration-150 after:ease-in-out before:duration-150 before:ease-in-out cursor-pointer">
                         <Image
                         src={banner}
                         alt={'banner'}
                         width={370}
                         height={700}
-                        className=""
+                        className="relative z-[5]"
+                        />
+                    </div>
+                    <div className="group md:hidden w-fit mx-auto h-fit relative hover:before:w-[200px] before:w-[100px] before:h-[220px] hover:before:h-[300px] md:before:h-[340px] md:hover:before:h-[450px] before:bg-primary before:absolute before:left-[-19px] before:bottom-[-19px] before:z-0 after:w-[100px] hover:after:w-[200px] after:h-[220px] hover:after:h-[300px] md:after:h-[340px] hover:md:after:h-[450px] after:bg-[#006837] after:absolute after:right-[-19px] after:top-[-19px] after:z-0 after:duration-150 after:ease-in-out before:duration-150 before:ease-in-out cursor-pointer">
+                        <Image
+                        src={banner}
+                        alt={'banner'}
+                        width={300}
+                        height={470}
+                        className="relative z-[5]"
                         />
                     </div>
                 </div>
